@@ -12,6 +12,7 @@ const getSuggestions = {
   query: Joi.object().keys({
     title: Joi.string(),
     description: Joi.string(),
+    populate: Joi.string()
   }),
 };
 

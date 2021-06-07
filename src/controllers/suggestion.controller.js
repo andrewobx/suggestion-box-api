@@ -13,7 +13,7 @@ const createSuggestion = catchAsync(async (req, res) => {
 
 const getSuggestions = catchAsync(async (req, res) => {
   const filter = pick(req.query, ['title', 'description']);
-  const options = pick(req.query, ['sortBy', 'limit', 'page']);
+  const options = pick(req.query, ['sortBy', 'limit', 'page', 'populate']);
   const result = await suggestionService.querySuggestions(filter, options);
   res.send(result);
 });
